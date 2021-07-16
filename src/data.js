@@ -14,7 +14,7 @@ export const social = [
   },
   {
     id: 3,
-    url: 'https://www.twitter.com',
+    url: 'https://www.instagram.com/chusyntax/',
     icon: <FaInstagram />,
   },
  
