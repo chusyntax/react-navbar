@@ -1,43 +1,44 @@
-import React, { useState, useRef, useEffect } from 'react'
-import { FaBars, FaTwitter } from 'react-icons/fa'
-import { social } from './data'
-import logo from './logo.svg'
+import React, { useState} from 'react';
+import { FaBars } from 'react-icons/fa';
+import { social } from './data';
+import styles from './Navbar.module.css';
+
 
 const Navbar = () => {
 const [showLinks, setShowLinks] = useState(false);
 
 return <nav>
-  <div className="nav-center">
-    <div className="nav-header">
-    <img src={logo} alt="logo" />
-      <button className="nav-toggle" onClick={()=>setShowLinks(!showLinks)}>
+  <div className={styles.nav_center}>
+    <div className={styles.nav_header}>
+      <h4 className={styles.logo}>CHUSYNTAX</h4> 
+      <button className={styles.nav_toggle} onClick={()=>setShowLinks(!showLinks)}>
         <FaBars />
       </button>
     </div>
-    <div className={`${showLinks?"links-container show-container":"links-container"}`}>
-      <ul className="links">
+    <div className={`${showLinks ? `${styles.links_container && styles.show_container}`  : `${styles.links_container}` }`}>
+      <ul className={styles.links}>
         <li>
-          <a href="#">Home</a>
+          <a href="w">Home</a>
         </li>
         <li>
-          <a href="#">About</a>
+          <a href="w">Projects</a>
         </li>
         <li>
-          <a href="#">Projects</a>
+          <a href="w">Experience</a>
         </li>
         <li>
-          <a href="#">Contact</a>
+          <a href="w">Contact</a>
         </li>
         <li>
-          <a href="#">Download Resume</a>
+          <a href="w">Download Resume</a>
         </li>
       </ul>
     </div>
-    <ul className="social-icons">
+    <ul className={styles.social_icons}>
      {social.map((socialIcons)=>{
   const {id,url,icon} = socialIcons;  
   return <li key={id}>
-    <a href={url} target="_blank">
+    <a href={url} target="_blank" rel="noopener noreferrer" >
       {icon}
     </a>
   </li>
