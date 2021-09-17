@@ -144,12 +144,14 @@ nav {
   letter-spacing:0.1rem;;
   display: block;
   padding: 0.5rem 1rem;
-  transition: transform 200ms ease-in;
+  transition: transform 250ms ease-in;
+ 
 }
 .links a:hover {
   color: rgb(255, 255, 255);
   padding-left: 1.5rem;
   transform: scale(1.03);
+
 }
 .social_icons {
   display: none;
@@ -197,8 +199,8 @@ nav {
   .social_icons a {
     font-size: 1.5rem;
     margin: 0 0.5rem;
-    color:white;
-    transition: transform 200ms ease-in;
+    color:rgb(255, 255, 255);
+    transition: transform 200ms ease-in-out;
   }
   .social_icons a:hover {
     color: rgb(255, 255, 255);
